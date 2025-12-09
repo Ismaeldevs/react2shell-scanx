@@ -1,4 +1,4 @@
-# react2shell-scanner
+# react2shell-scanx
 
 Una herramienta de línea de comandos para detectar CVE-2025-55182 y CVE-2025-66478 en aplicaciones Next.js que utilizan React Server Components.
 

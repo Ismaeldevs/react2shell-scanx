@@ -3,7 +3,7 @@
 
 Version in spanish: [README.es.md](README.es.md)
 
-# react2shell-scanner
+# react2shell-scanx
 
 A command-line tool for detecting CVE-2025-55182 and CVE-2025-66478 in Next.js applications using React Server Components.
 
