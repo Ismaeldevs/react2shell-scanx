@@ -218,53 +218,61 @@ def main():
     if not args.quiet:
         print(f"{Colors.CYAN}{Colors.BOLD}")
         print("╔═══════════════════════════════════════════════════════════════════════════╗")
-        print("║                      🛠️  SCAN CONFIGURATION                               ║")
+        print("║                      SCAN CONFIGURATION                                   ║")
         print("╠═══════════════════════════════════════════════════════════════════════════╣")
         
         # Targets
-        print(f"║  🎯  Targets:       {Colors.YELLOW}{len(hosts)} host(s){Colors.CYAN}" + " " * (52 - len(str(len(hosts)))) + "║")
+        targets_val = f"{len(hosts)} host(s)"
+        padding = 56 - len(targets_val)
+        print(f"║  Targets:        {Colors.YELLOW}{targets_val}{Colors.CYAN}" + " " * padding + "║")
         
         # Paths
         if paths:
             paths_display = ', '.join(paths[:2])
             if len(paths) > 2:
                 paths_display += f" (+{len(paths)-2} more)"
-            padding = 52 - len(paths_display)
-            print(f"║  📋  Paths:         {Colors.YELLOW}{paths_display}{Colors.CYAN}" + " " * max(0, padding) + "║")
+            padding = 56 - len(paths_display)
+            print(f"║  Paths:          {Colors.YELLOW}{paths_display}{Colors.CYAN}" + " " * max(0, padding) + "║")
         else:
-            print(f"║  📋  Paths:         {Colors.YELLOW}/ (root){Colors.CYAN}" + " " * 44 + "║")
+            print(f"║  Paths:          {Colors.YELLOW}/ (root){Colors.CYAN}" + " " * 48 + "║")
         
         # Threads
-        print(f"║  ⚡  Threads:       {Colors.YELLOW}{args.threads}{Colors.CYAN}" + " " * (54 - len(str(args.threads))) + "║")
+        threads_val = str(args.threads)
+        padding = 56 - len(threads_val)
+        print(f"║  Threads:        {Colors.YELLOW}{threads_val}{Colors.CYAN}" + " " * padding + "║")
         
         # Timeout
-        print(f"║  ⏱️   Timeout:       {Colors.YELLOW}{config.timeout}s{Colors.CYAN}" + " " * (53 - len(str(config.timeout))) + "║")
+        timeout_val = f"{config.timeout}s"
+        padding = 56 - len(timeout_val)
+        print(f"║  Timeout:        {Colors.YELLOW}{timeout_val}{Colors.CYAN}" + " " * padding + "║")
         
         # Mode
         if config.check_mode == CheckMode.SAFE:
-            mode_text = "🔒 Safe Side-Channel"
+            mode_text = "Safe Side-Channel"
             mode_color = Colors.GREEN
         elif config.check_mode == CheckMode.VERCEL_WAF_BYPASS:
-            mode_text = "🔧 Vercel WAF Bypass"
+            mode_text = "Vercel WAF Bypass"
             mode_color = Colors.MAGENTA
         else:
-            mode_text = "💥 RCE Proof-of-Concept"
+            mode_text = "RCE Proof-of-Concept"
             mode_color = Colors.RED
         
-        print(f"║  🎮  Mode:          {mode_color}{mode_text}{Colors.CYAN}" + " " * (54 - len(mode_text)) + "║")
+        padding = 56 - len(mode_text)
+        print(f"║  Mode:           {mode_color}{mode_text}{Colors.CYAN}" + " " * padding + "║")
         
         # Opciones adicionales
         options_list = []
         if args.windows:
-            options_list.append("💻 Windows")
+            options_list.append("Windows")
         if args.waf_bypass:
-            options_list.append(f"🛡️ WAF ({args.waf_bypass_size}KB)")
+            options_list.append(f"WAF-Bypass({args.waf_bypass_size}KB)")
         if args.insecure:
-            options_list.append("⚠️ No SSL")
+            options_list.append("No-SSL-Verify")
         
         if options_list:
             options_str = ", ".join(options_list)
-            print(f"║  ⚙️   Options:       {Colors.YELLOW}{options_str}{Colors.CYAN}" + " " * (52 - len(options_str)) + "║")
+            padding = 56 - len(options_str)
+            print(f"║  Options:        {Colors.YELLOW}{options_str}{Colors.CYAN}" + " " * padding + "║")
         
         print("╚═══════════════════════════════════════════════════════════════════════════╝")
         print(f"{Colors.RESET}\n")

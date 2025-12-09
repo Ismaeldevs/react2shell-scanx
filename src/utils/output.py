@@ -44,7 +44,7 @@ def print_result(result: "ScanResult", verbose: bool = False):
     redirected = result.is_redirected
 
     if result.vulnerable is True:
-        status_icon = Colors.colorize("🚨 VULNERABLE", Colors.RED + Colors.BOLD)
+        status_icon = Colors.colorize("[VULNERABLE]", Colors.RED + Colors.BOLD)
         host_display = Colors.colorize(host, Colors.WHITE + Colors.BOLD)
         status_code = Colors.colorize(f"[{result.status_code}]", Colors.YELLOW)
         print(f"\n  {status_icon}")
@@ -56,7 +56,7 @@ def print_result(result: "ScanResult", verbose: bool = False):
             print(f"  └─ {Colors.colorize('CVE-2025-55182/66478 DETECTED!', Colors.RED + Colors.BOLD)}")
             
     elif result.vulnerable is False:
-        status_icon = Colors.colorize("✅ SAFE", Colors.GREEN + Colors.BOLD)
+        status_icon = Colors.colorize("[SAFE]", Colors.GREEN + Colors.BOLD)
         if result.status_code is not None:
             status_code = Colors.colorize(f"[{result.status_code}]", Colors.GREEN)
             print(f"  {status_icon} {Colors.colorize(host, Colors.WHITE)} {status_code}")
@@ -67,13 +67,13 @@ def print_result(result: "ScanResult", verbose: bool = False):
             print(f"    └─ {Colors.colorize('Redirect:', Colors.MAGENTA)} {result.final_url}")
             
     else:
-        status_icon = Colors.colorize("⚠️  ERROR", Colors.YELLOW + Colors.BOLD)
+        status_icon = Colors.colorize("[ERROR]", Colors.YELLOW + Colors.BOLD)
         error_msg = result.error or "Error desconocido"
         print(f"  {status_icon} {Colors.colorize(host, Colors.WHITE)}")
         print(f"    └─ {Colors.colorize(error_msg, Colors.YELLOW)}")
 
     if verbose and result.response:
-        print(f"\n  {Colors.colorize('📄 Response Preview:', Colors.CYAN + Colors.BOLD)}")
+        print(f"\n  {Colors.colorize('Response Preview:', Colors.CYAN + Colors.BOLD)}")
         lines = result.response.split("\r\n")[:10]
         for idx, line in enumerate(lines, 1):
             prefix = "  │ " if idx < len(lines) else "  └─"
@@ -93,30 +93,38 @@ def print_summary(total_hosts: int, vulnerable_count: int, error_count: int):
     
     print(f"\n{Colors.CYAN}{Colors.BOLD}")
     print("╔═══════════════════════════════════════════════════════════════════════════╗")
-    print("║                          📊 SCAN SUMMARY                                  ║")
+    print("║                            SCAN SUMMARY                                   ║")
     print("╠═══════════════════════════════════════════════════════════════════════════╣")
     
     # Total
-    print(f"║  📌  Total Scanned:  {Colors.WHITE}{total_hosts}{Colors.CYAN}" + " " * (56 - len(str(total_hosts))) + "║")
+    total_val = str(total_hosts)
+    padding = 54 - len(total_val)
+    print(f"║  Total Scanned:   {Colors.WHITE}{total_val}{Colors.CYAN}" + " " * padding + "║")
     print("║                                                                           ║")
     
     # Vulnerables
+    vuln_val = str(vulnerable_count)
+    padding = 54 - len(vuln_val)
     if vulnerable_count > 0:
-        print(f"║  🚨  Vulnerable:     {Colors.RED}{vulnerable_count}{Colors.CYAN}" + " " * (56 - len(str(vulnerable_count))) + "║")
+        print(f"║  Vulnerable:      {Colors.RED}{vuln_val}{Colors.CYAN}" + " " * padding + "║")
     else:
-        print(f"║  🚨  Vulnerable:     {Colors.GREEN}{vulnerable_count}{Colors.CYAN}" + " " * (56 - len(str(vulnerable_count))) + "║")
+        print(f"║  Vulnerable:      {Colors.GREEN}{vuln_val}{Colors.CYAN}" + " " * padding + "║")
     
     # Safe
-    print(f"║  ✅  Safe:           {Colors.GREEN}{safe_count}{Colors.CYAN}" + " " * (56 - len(str(safe_count))) + "║")
+    safe_val = str(safe_count)
+    padding = 54 - len(safe_val)
+    print(f"║  Safe:            {Colors.GREEN}{safe_val}{Colors.CYAN}" + " " * padding + "║")
     
     # Errors
-    print(f"║  ⚠️   Errors:         {Colors.YELLOW}{error_count}{Colors.CYAN}" + " " * (56 - len(str(error_count))) + "║")
+    error_val = str(error_count)
+    padding = 54 - len(error_val)
+    print(f"║  Errors:          {Colors.YELLOW}{error_val}{Colors.CYAN}" + " " * padding + "║")
     
     print("╚═══════════════════════════════════════════════════════════════════════════╝")
     print(Colors.RESET)
     
     # Mensaje final
     if vulnerable_count > 0:
-        print(f"\n{Colors.YELLOW}⚡{Colors.RESET} {Colors.RED}{Colors.BOLD}ACTION REQUIRED:{Colors.RESET} {vulnerable_count} vulnerable host(s) detected!")
+        print(f"\n{Colors.YELLOW}[!]{Colors.RESET} {Colors.RED}{Colors.BOLD}ACTION REQUIRED:{Colors.RESET} {vulnerable_count} vulnerable host(s) detected!")
     else:
-        print(f"\n{Colors.GREEN}✨ All systems secure!{Colors.RESET} No vulnerabilities detected.")
+        print(f"\n{Colors.GREEN}[+] All systems secure!{Colors.RESET} No vulnerabilities detected.")
