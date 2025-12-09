@@ -144,3 +144,9 @@ This tooling originally was built out as a safe way to detect the RCE. This func
 ## Output
 
 Results are printed to the terminal. When using `-o`, vulnerable hosts are saved to a JSON file containing the full HTTP request and response for verification.
+
+
+- - -
+
+
+Version in spanish: [README.es.md](README.es.md)
