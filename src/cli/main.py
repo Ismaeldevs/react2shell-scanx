@@ -232,13 +232,13 @@ def main():
             if len(paths) > 2:
                 paths_display += f" (+{len(paths)-2} more)"
             padding = 56 - len(paths_display)
-            print(f"║  Paths:          {Colors.YELLOW}{paths_display}{Colors.CYAN}" + " " * max(0, padding) + "║")
+            print(f"║  Paths:          {Colors.YELLOW}{paths_display}{Colors.CYAN}" + " " * padding + "║")
         else:
-            print(f"║  Paths:          {Colors.YELLOW}/ (root){Colors.CYAN}" + " " * 48 + "║")
+            print(f"║  Paths:          {Colors.YELLOW}/ (root){Colors.CYAN}" + " " * 49 + "║")
         
         # Threads
         threads_val = str(args.threads)
-        padding = 56 - len(threads_val)
+        padding = 57 - len(threads_val)
         print(f"║  Threads:        {Colors.YELLOW}{threads_val}{Colors.CYAN}" + " " * padding + "║")
         
         # Timeout
@@ -257,7 +257,7 @@ def main():
             mode_text = "RCE Proof-of-Concept"
             mode_color = Colors.RED
         
-        padding = 56 - len(mode_text)
+        padding = 57 - len(mode_text)
         print(f"║  Mode:           {mode_color}{mode_text}{Colors.CYAN}" + " " * padding + "║")
         
         # Opciones adicionales
