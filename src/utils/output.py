@@ -31,8 +31,8 @@ def print_banner():
 ║              {Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                        ║
 ║              {Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                        ║
 ║              {Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}║{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                        ║
-║              {Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                        ║
-║              {Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗                   ║
+║              ╚════{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                        ║
+║              {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗                   ║
 ║              ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝                   ║
 ║                                                                           ║
 ║        {Colors.YELLOW}CVE-2025-55182 & CVE-2025-66478 Detection Scanner{Colors.CYAN}                   ║
