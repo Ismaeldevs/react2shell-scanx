@@ -11,7 +11,7 @@ For technical details on the vulnerability and detection methodology, see our bl
 
 ## 🏗️ Architecture
 
-This project has been refactored with a **modular architecture** following SOLID principles and design patterns. See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed information.
+This project has been refactored with a **modular architecture** following SOLID principles and design patterns.
 
 ### Project Structure
 
