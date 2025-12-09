@@ -14,17 +14,17 @@ def print_banner():
 {Colors.CYAN}{Colors.BOLD}
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║                                                                           ║
-║   {Colors.RED}██████{Colors.CYAN}╗ {Colors.RED}███████{Colors.CYAN}╗ {Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██████{Colors.CYAN}╗{Colors.RED}████████{Colors.CYAN}╗{Colors.RED}██████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗     {Colors.RED}██{Colors.CYAN}╗      ║
-║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝╚══{Colors.RED}██{Colors.CYAN}╔══╝╚════{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║      ║
-║   {Colors.RED}██████{Colors.CYAN}╔╝{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}║{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║      ║
-║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║╚════{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║      ║
+║   {Colors.RED}██████{Colors.CYAN}╗ {Colors.RED}███████{Colors.CYAN}╗ {Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██████{Colors.CYAN}╗{Colors.RED}████████{Colors.CYAN}╗{Colors.RED}██████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗     {Colors.RED}██{Colors.CYAN}╗  ║
+║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝╚══{Colors.RED}██{Colors.CYAN}╔══╝╚════{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
+║   {Colors.RED}██████{Colors.CYAN}╔╝{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}║{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
+║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║╚════{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
 ║   {Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║╚{Colors.RED}██████{Colors.CYAN}╗   {Colors.RED}██{Colors.CYAN}║   {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗ ║
 ║   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ║
 ║                                                                           ║
-║        {Colors.YELLOW}🔍 CVE-2025-55182 & CVE-2025-66478 Detection Scanner 🔍{Colors.CYAN}          ║
-║              {Colors.WHITE}High Fidelity RSC/Next.js RCE Detection{Colors.CYAN}                  ║
+║      {Colors.YELLOW}🔍 CVE-2025-55182 & CVE-2025-66478 Detection Scanner 🔍{Colors.CYAN}            ║
+║            {Colors.WHITE}High Fidelity RSC/Next.js RCE Detection{Colors.CYAN}                    ║
 ║                                                                           ║
-║                  {Colors.MAGENTA}💜 Brought to you by Assetnote 💜{Colors.CYAN}                     ║
+║                {Colors.MAGENTA}💜 Brought to you by Assetnote 💜{Colors.CYAN}                       ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 {Colors.RESET}
@@ -91,42 +91,32 @@ def print_summary(total_hosts: int, vulnerable_count: int, error_count: int):
     """
     safe_count = total_hosts - vulnerable_count - error_count
     
-    print()
-    print(Colors.colorize("╔═══════════════════════════════════════════════════════════════╗", Colors.CYAN + Colors.BOLD))
-    print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + Colors.colorize("                    📊 SCAN SUMMARY                          ", Colors.WHITE + Colors.BOLD) + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
-    print(Colors.colorize("╠═══════════════════════════════════════════════════════════════╣", Colors.CYAN + Colors.BOLD))
+    print(f"\n{Colors.CYAN}{Colors.BOLD}")
+    print("╔═══════════════════════════════════════════════════════════════════════════╗")
+    print("║                          📊 SCAN SUMMARY                                  ║")
+    print("╠═══════════════════════════════════════════════════════════════════════════╣")
     
     # Total
-    total_line = f"  📌 Total Scanned: {Colors.colorize(str(total_hosts), Colors.WHITE + Colors.BOLD)}"
-    padding = 63 - len(f"  📌 Total Scanned: {total_hosts}")
-    print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + total_line + " " * padding + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
-    
-    print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + " " * 63 + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
+    print(f"║  📌  Total Scanned:  {Colors.WHITE}{total_hosts}{Colors.CYAN}" + " " * (56 - len(str(total_hosts))) + "║")
+    print("║                                                                           ║")
     
     # Vulnerables
     if vulnerable_count > 0:
-        vuln_line = f"  🚨 Vulnerable:    {Colors.colorize(str(vulnerable_count), Colors.RED + Colors.BOLD)}"
-        vuln_padding = 63 - len(f"  🚨 Vulnerable:    {vulnerable_count}")
-        print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + vuln_line + " " * vuln_padding + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
+        print(f"║  🚨  Vulnerable:     {Colors.RED}{vulnerable_count}{Colors.CYAN}" + " " * (56 - len(str(vulnerable_count))) + "║")
     else:
-        vuln_line = f"  🚨 Vulnerable:    {Colors.colorize(str(vulnerable_count), Colors.GREEN)}"
-        vuln_padding = 63 - len(f"  🚨 Vulnerable:    {vulnerable_count}")
-        print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + vuln_line + " " * vuln_padding + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
+        print(f"║  🚨  Vulnerable:     {Colors.GREEN}{vulnerable_count}{Colors.CYAN}" + " " * (56 - len(str(vulnerable_count))) + "║")
     
     # Safe
-    safe_line = f"  ✅ Safe:          {Colors.colorize(str(safe_count), Colors.GREEN)}"
-    safe_padding = 63 - len(f"  ✅ Safe:          {safe_count}")
-    print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + safe_line + " " * safe_padding + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
+    print(f"║  ✅  Safe:           {Colors.GREEN}{safe_count}{Colors.CYAN}" + " " * (56 - len(str(safe_count))) + "║")
     
     # Errors
-    error_line = f"  ⚠️  Errors:        {Colors.colorize(str(error_count), Colors.YELLOW)}"
-    error_padding = 63 - len(f"  ⚠️  Errors:        {error_count}")
-    print(Colors.colorize("║", Colors.CYAN + Colors.BOLD) + error_line + " " * error_padding + Colors.colorize("║", Colors.CYAN + Colors.BOLD))
+    print(f"║  ⚠️   Errors:         {Colors.YELLOW}{error_count}{Colors.CYAN}" + " " * (56 - len(str(error_count))) + "║")
     
-    print(Colors.colorize("╚═══════════════════════════════════════════════════════════════╝", Colors.CYAN + Colors.BOLD))
+    print("╚═══════════════════════════════════════════════════════════════════════════╝")
+    print(Colors.RESET)
     
     # Mensaje final
     if vulnerable_count > 0:
-        print(f"\n{Colors.colorize('⚡', Colors.YELLOW)} {Colors.colorize('ACTION REQUIRED:', Colors.RED + Colors.BOLD)} {vulnerable_count} vulnerable host(s) detected!")
+        print(f"\n{Colors.YELLOW}⚡{Colors.RESET} {Colors.RED}{Colors.BOLD}ACTION REQUIRED:{Colors.RESET} {vulnerable_count} vulnerable host(s) detected!")
     else:
-        print(f"\n{Colors.colorize('✨', Colors.GREEN)} {Colors.colorize('All systems secure!', Colors.GREEN + Colors.BOLD)} No vulnerabilities detected.")
+        print(f"\n{Colors.GREEN}✨ All systems secure!{Colors.RESET} No vulnerabilities detected.")

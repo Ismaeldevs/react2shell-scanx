@@ -216,53 +216,58 @@ def main():
 
     # Mostrar información de configuración
     if not args.quiet:
-        print(Colors.colorize("\n┌───────────────────────────────────────────────────────────┐", Colors.CYAN))
-        print(Colors.colorize("│", Colors.CYAN) + Colors.colorize("              🛠️  SCAN CONFIGURATION                    ", Colors.WHITE + Colors.BOLD) + Colors.colorize("│", Colors.CYAN))
-        print(Colors.colorize("├───────────────────────────────────────────────────────────┤", Colors.CYAN))
+        print(f"{Colors.CYAN}{Colors.BOLD}")
+        print("╔═══════════════════════════════════════════════════════════════════════════╗")
+        print("║                      🛠️  SCAN CONFIGURATION                               ║")
+        print("╠═══════════════════════════════════════════════════════════════════════════╣")
         
         # Targets
-        print(Colors.colorize("│", Colors.CYAN) + f"  🎯 {Colors.colorize('Targets:', Colors.WHITE + Colors.BOLD)}        {Colors.colorize(str(len(hosts)), Colors.YELLOW)} host(s)" + " " * (38 - len(str(len(hosts)))) + Colors.colorize("│", Colors.CYAN))
+        print(f"║  🎯  Targets:       {Colors.YELLOW}{len(hosts)} host(s){Colors.CYAN}" + " " * (52 - len(str(len(hosts)))) + "║")
         
         # Paths
         if paths:
-            paths_display = ', '.join(paths[:3])
-            if len(paths) > 3:
-                paths_display += f"... (+{len(paths)-3} more)"
-            paths_line = f"  📋 {Colors.colorize('Paths:', Colors.WHITE + Colors.BOLD)}         {Colors.colorize(paths_display, Colors.YELLOW)}"
-            padding = 59 - len(f"  📋 Paths:         {paths_display}")
-            print(Colors.colorize("│", Colors.CYAN) + paths_line + " " * max(0, padding) + Colors.colorize("│", Colors.CYAN))
+            paths_display = ', '.join(paths[:2])
+            if len(paths) > 2:
+                paths_display += f" (+{len(paths)-2} more)"
+            padding = 52 - len(paths_display)
+            print(f"║  📋  Paths:         {Colors.YELLOW}{paths_display}{Colors.CYAN}" + " " * max(0, padding) + "║")
         else:
-            print(Colors.colorize("│", Colors.CYAN) + f"  📋 {Colors.colorize('Paths:', Colors.WHITE + Colors.BOLD)}         {Colors.colorize('/', Colors.YELLOW)} (root)" + " " * 34 + Colors.colorize("│", Colors.CYAN))
+            print(f"║  📋  Paths:         {Colors.YELLOW}/ (root){Colors.CYAN}" + " " * 44 + "║")
         
         # Threads
-        print(Colors.colorize("│", Colors.CYAN) + f"  ⚡ {Colors.colorize('Threads:', Colors.WHITE + Colors.BOLD)}       {Colors.colorize(str(args.threads), Colors.YELLOW)}" + " " * (46 - len(str(args.threads))) + Colors.colorize("│", Colors.CYAN))
+        print(f"║  ⚡  Threads:       {Colors.YELLOW}{args.threads}{Colors.CYAN}" + " " * (54 - len(str(args.threads))) + "║")
         
         # Timeout
-        print(Colors.colorize("│", Colors.CYAN) + f"  ⏱️  {Colors.colorize('Timeout:', Colors.WHITE + Colors.BOLD)}       {Colors.colorize(str(config.timeout), Colors.YELLOW)}s" + " " * (45 - len(str(config.timeout))) + Colors.colorize("│", Colors.CYAN))
+        print(f"║  ⏱️   Timeout:       {Colors.YELLOW}{config.timeout}s{Colors.CYAN}" + " " * (53 - len(str(config.timeout))) + "║")
         
         # Mode
         if config.check_mode == CheckMode.SAFE:
-            mode_display = Colors.colorize("🔒 Safe Side-Channel", Colors.GREEN)
+            mode_text = "🔒 Safe Side-Channel"
+            mode_color = Colors.GREEN
         elif config.check_mode == CheckMode.VERCEL_WAF_BYPASS:
-            mode_display = Colors.colorize("🔧 Vercel WAF Bypass", Colors.MAGENTA)
+            mode_text = "🔧 Vercel WAF Bypass"
+            mode_color = Colors.MAGENTA
         else:
-            mode_display = Colors.colorize("💥 RCE Proof-of-Concept", Colors.RED)
-        print(Colors.colorize("│", Colors.CYAN) + f"  🎮 {Colors.colorize('Mode:', Colors.WHITE + Colors.BOLD)}          {mode_display}" + " " * (59 - len(f"  🎮 Mode:          Safe Side-Channel")) + Colors.colorize("│", Colors.CYAN))
+            mode_text = "💥 RCE Proof-of-Concept"
+            mode_color = Colors.RED
+        
+        print(f"║  🎮  Mode:          {mode_color}{mode_text}{Colors.CYAN}" + " " * (54 - len(mode_text)) + "║")
         
         # Opciones adicionales
-        options = []
+        options_list = []
         if args.windows:
-            options.append(Colors.colorize("💻 Windows", Colors.BLUE))
+            options_list.append("💻 Windows")
         if args.waf_bypass:
-            options.append(Colors.colorize(f"🛡️ WAF Bypass ({args.waf_bypass_size}KB)", Colors.MAGENTA))
+            options_list.append(f"🛡️ WAF ({args.waf_bypass_size}KB)")
         if args.insecure:
-            options.append(Colors.colorize("⚠️ No SSL Verify", Colors.YELLOW))
+            options_list.append("⚠️ No SSL")
         
-        if options:
-            print(Colors.colorize("│", Colors.CYAN) + f"  ⚙️  {Colors.colorize('Options:', Colors.WHITE + Colors.BOLD)}       {', '.join(options)}" + " " * max(0, 59 - len(f"  ⚙️  Options:       {', '.join([o.replace(Colors.BLUE, '').replace(Colors.MAGENTA, '').replace(Colors.YELLOW, '').replace(Colors.RESET, '') for o in options])}")) + Colors.colorize("│", Colors.CYAN))
+        if options_list:
+            options_str = ", ".join(options_list)
+            print(f"║  ⚙️   Options:       {Colors.YELLOW}{options_str}{Colors.CYAN}" + " " * (52 - len(options_str)) + "║")
         
-        print(Colors.colorize("└───────────────────────────────────────────────────────────┘", Colors.CYAN))
-        print()
+        print("╚═══════════════════════════════════════════════════════════════════════════╝")
+        print(f"{Colors.RESET}\n")
 
     # Deshabilitar warnings de SSL si es necesario
     if args.insecure:
