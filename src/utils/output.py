@@ -14,17 +14,23 @@ def print_banner():
 {Colors.CYAN}{Colors.BOLD}
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ║                                                                           ║
-║   {Colors.RED}██████{Colors.CYAN}╗ {Colors.RED}███████{Colors.CYAN}╗ {Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██████{Colors.CYAN}╗{Colors.RED}████████{Colors.CYAN}╗{Colors.RED}██████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╗     {Colors.RED}██{Colors.CYAN}╗  ║
-║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝╚══{Colors.RED}██{Colors.CYAN}╔══╝╚════{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
-║   {Colors.RED}██████{Colors.CYAN}╔╝{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}║{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
-║   {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║       {Colors.RED}██{Colors.CYAN}║╚════{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║  ║
-║   {Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║╚{Colors.RED}██████{Colors.CYAN}╗   {Colors.RED}██{Colors.CYAN}║   {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗ ║
-║   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ║
+║                {Colors.RED}██████{Colors.CYAN}╗ {Colors.RED}███████{Colors.CYAN}╗ {Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██████{Colors.CYAN}╗{Colors.RED}████████{Colors.CYAN}╗                  ║
+║                {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝╚══{Colors.RED}██{Colors.CYAN}╔══╝                  ║
+║                {Colors.RED}██████{Colors.CYAN}╔╝{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}███████{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║                     ║
+║                {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║        {Colors.RED}██{Colors.CYAN}║                     ║
+║                {Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║╚{Colors.RED}██████{Colors.CYAN}╗   {Colors.RED}██{Colors.CYAN}║                     ║
+║                ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝                     ║
+║             {Colors.RED}██████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                      ║
+║             {Colors.RED}╚════██{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                      ║
+║              {Colors.RED}█████{Colors.CYAN}╔╝{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}║{Colors.RED}█████{Colors.CYAN}╗  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                      ║
+║             {Colors.RED}██{Colors.CYAN}╔═══╝ {Colors.RED}██{Colors.CYAN}╔════╝{Colors.RED}██{Colors.CYAN}╔══{Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}╔══╝  {Colors.RED}██{Colors.CYAN}║     {Colors.RED}██{Colors.CYAN}║                      ║
+║             {Colors.RED}███████{Colors.CYAN}╗{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}██{Colors.CYAN}║  {Colors.RED}██{Colors.CYAN}║{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗{Colors.RED}███████{Colors.CYAN}╗                 ║
+║             ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝                 ║
 ║                                                                           ║
-║      {Colors.YELLOW}🔍 CVE-2025-55182 & CVE-2025-66478 Detection Scanner 🔍{Colors.CYAN}            ║
-║            {Colors.WHITE}High Fidelity RSC/Next.js RCE Detection{Colors.CYAN}                    ║
+║         {Colors.YELLOW}CVE-2025-55182 & CVE-2025-66478 Detection Scanner{Colors.CYAN}                  ║
+║              {Colors.WHITE}High Fidelity RSC/Next.js RCE Detection{Colors.CYAN}                    ║
 ║                                                                           ║
-║                {Colors.MAGENTA}💜 Brought to you by Assetnote 💜{Colors.CYAN}                       ║
+║                  {Colors.MAGENTA}Brought to you by Assetnote{Colors.CYAN}                            ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 {Colors.RESET}
